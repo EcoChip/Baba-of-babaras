@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reino de los Babaras</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #eee; }
+    #top-bar { display: flex; padding: 10px; background: #fff; }
+    .resource { margin-right: 15px; display: flex; align-items: center; }
+    .resource img { width: 24px; margin-right: 5px; }
+
+    #zona-construccion { width: 100%; height: 600px; background: url('img/fondo_reino.png'); background-size: cover; position: relative; }
+    .estructura { position: absolute; width: 64px; height: 64px; cursor: pointer; }
+    #menu-construccion { padding: 10px; background: #ddd; border-right: 2px solid #aaa; }
+  </style>
+</head>
+<body>
+
+<div id="top-bar">
+  <div class="resource"><img src="img/icono_madera.png"><span id="madera">100</span></div>
+  <div class="resource"><img src="img/icono_comida.png"><span id="comida">100</span></div>
+  <div class="resource"><img src="img/icono_piedra.png"><span id="piedra">100</span></div>
+  <div class="resource"><img src="img/icono_babaras.png"><span id="babaras">50</span></div>
+  <div class="resource"><img src="img/icono_gemas.png"><span id="gemas">5</span></div>
+</div>
+
+<div style="display: flex">
+  <div id="menu-construccion">
+    <h3>Construcciones</h3>
+    <button onclick="construir('granjaMendi')">Granja Mendi</button><br>
+    <button onclick="construir('cuartelAlbrecht')">Cuartel Albrecht</button><br>
+    <button onclick="construir('almacenBabaras')">Almacén Babaras</button>
+  </div>
+  <div id="zona-construccion"></div>
+</div>
+
+<script src="main.js"></script>
+<script type="module" src="estructuras/granjaMendi.js"></script>
+<script type="module" src="estructuras/cuartelAlbrecht.js"></script>
+<script type="module" src="estructuras/almacenBabaras.js"></script>
+</body>
+</html>
